@@ -1,2 +1,5 @@
-package Entities;public class Teacher {
+package Entities;
+
+public class
+Teacher {
 }

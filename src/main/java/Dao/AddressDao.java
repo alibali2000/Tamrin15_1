@@ -1,2 +1,4 @@
-package Dao;public class AddressDao {
+package Dao;
+
+public class AddressDao {
 }

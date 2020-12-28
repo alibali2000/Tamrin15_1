@@ -1,2 +1,4 @@
-package Util;public class JPAUtil {
+package Util;
+
+public class JPAUtil {
 }

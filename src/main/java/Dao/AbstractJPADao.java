@@ -1,4 +1,4 @@
 package Dao;
 
-public class AbstractJPADao {
+public abstract class AbstractJPADao {
 }

@@ -1,2 +1,4 @@
-package Entities;public class Student {
+package Entities;
+
+public class Student {
 }

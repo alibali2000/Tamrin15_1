@@ -1,2 +1,4 @@
-package Dao;public class TeacherDao {
+package Dao;
+
+public class TeacherDao {
 }
