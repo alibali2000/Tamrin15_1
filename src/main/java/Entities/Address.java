@@ -101,4 +101,5 @@ public class Address extends Object {
     public void setAdTeacher(Teacher adTeacher) {
         this.adTeacher = adTeacher;
     }
+
 }

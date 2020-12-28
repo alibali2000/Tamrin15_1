@@ -87,4 +87,12 @@ public class Student
     public void setStaddresses(Set<Address> staddresses) {
         this.staddresses = staddresses;
     }
+
+    public Set<Teacher> getStTeachers() {
+        return stTeachers;
+    }
+
+    public void setStTeachers(Set<Teacher> stTeachers) {
+        this.stTeachers = stTeachers;
+    }
 }

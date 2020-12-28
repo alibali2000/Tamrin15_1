@@ -88,4 +88,19 @@ public class Teacher
         this.teachertCode = teachertCode;
     }
 
+    public Address getStaddress() {
+        return staddress;
+    }
+
+    public void setStaddress(Address staddress) {
+        this.staddress = staddress;
+    }
+
+    public Set<Student> getTchStudents() {
+        return tchStudents;
+    }
+
+    public void setTchStudents(Set<Student> tchStudents) {
+        this.tchStudents = tchStudents;
+    }
 }
