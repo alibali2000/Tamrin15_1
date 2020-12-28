@@ -1,4 +1,76 @@
 package Entities;
 
-public class Student {
+import javax.persistence.*;
+import java.time.LocalDate;
+
+
+@Entity
+public class Student
+{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name ="student_id")
+    private Integer studentID;
+    @Column(name = "st_first_name",nullable = false)
+    private String firstname;
+    @Column(name = "st_last_name",nullable = false)
+    private String lastname;
+    @Column(name = "student_code",unique = true,nullable = false)
+    private Integer studentCode;
+    @Column(name = "st_birthday")
+    private LocalDate birthDay;
+
+
+
+    public Student(){}
+    public Student(String firstname,String lastName,Integer studentCode,LocalDate birthday)
+    {
+        this.firstname=firstname;
+        this.lastname=lastName;
+        this.studentCode=studentCode;
+        this.birthDay=birthday;
+    }
+
+
+
+    public Integer getStudentID() {
+        return studentID;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public LocalDate getBirthDay() {
+        return birthDay;
+    }
+
+    public Integer getStudentCode() {
+        return studentCode;
+    }
+
+    public void setStudentID(Integer studentID) {
+        this.studentID = studentID;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public void setBirthDay(LocalDate birthDay) {
+        this.birthDay = birthDay;
+    }
+
+    public void setStudentCode(Integer studentCode) {
+        this.studentCode = studentCode;
+    }
+
 }
