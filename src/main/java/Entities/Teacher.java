@@ -2,6 +2,7 @@ package Entities;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 public class Teacher
@@ -25,6 +26,8 @@ public class Teacher
     @JoinColumn(name = "fk_tch_address")
     private Address staddress;
 
+    @ManyToMany(mappedBy = "stTeachers")
+    private Set<Student> tchStudents;
 
 
     public Teacher(){}

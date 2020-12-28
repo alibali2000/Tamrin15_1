@@ -24,6 +24,10 @@ public class Student
     @OneToMany(mappedBy = "adStudent")
     @Column(name = "fk_st_addresses")
     private Set<Address> staddresses;
+    @ManyToMany
+    @JoinTable(name = "st_teachers",joinColumns = @JoinColumn(name ="fk_st_tch_id")
+            ,inverseJoinColumns = @JoinColumn(name = "fk_st_id"))
+    private Set<Teacher> stTeachers;
 
     public Student(){}
     public Student(String firstname,String lastName,Integer studentCode,LocalDate birthday)
