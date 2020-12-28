@@ -29,13 +29,17 @@ public class Address extends Object {
     public Address() {
     }
 
-    public Address(Integer streetnumber, String state, String city,
-                   Integer postaladdress, Integer postalcode) {
-        this.streetNumber = streetnumber;
-        this.state = state;
-        this.city = city;
-        this.postalAddress = postaladdress;
-        this.postalCode = postalcode;
+    public Address(Integer streetnumber,String state,String city,
+                   Integer postaladdress,Integer postalcode,
+                   Student student,Teacher teacher)
+    {
+        this.streetNumber=streetnumber;
+        this.state=state;
+        this.city=city;
+        this.postalAddress=postaladdress;
+        this.postalCode=postalcode;
+        this.adStudent=student;
+        this.adTeacher=teacher;
     }
 
     public Integer getAdId() {
