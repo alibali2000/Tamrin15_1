@@ -2,6 +2,7 @@ package Entities;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
 
 @Entity
@@ -20,7 +21,9 @@ public class Student
     @Column(name = "st_birthday")
     private LocalDate birthDay;
 
-
+    @OneToMany(mappedBy = "adStudent")
+    @Column(name = "fk_st_addresses")
+    private Set<Address> staddresses;
 
     public Student(){}
     public Student(String firstname,String lastName,Integer studentCode,LocalDate birthday)
@@ -73,4 +76,11 @@ public class Student
         this.studentCode = studentCode;
     }
 
+    public Set<Address> getStaddresses() {
+        return staddresses;
+    }
+
+    public void setStaddresses(Set<Address> staddresses) {
+        this.staddresses = staddresses;
+    }
 }
