@@ -21,6 +21,11 @@ public class Teacher
     @Column(name = "tch_birthday",nullable = false)
     private LocalDate birthDay;
 
+    @OneToOne(mappedBy = "adTeacher")
+    @JoinColumn(name = "fk_tch_address")
+    private Address staddress;
+
+
 
     public Teacher(){}
     public Teacher(String firstName,String lastName,Integer teacherCode,Double salary,LocalDate birthday)

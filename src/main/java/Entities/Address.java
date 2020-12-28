@@ -22,6 +22,9 @@ public class Address extends Object {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_ad_student",nullable = false)
     private Student adStudent;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_ad_teacher",nullable = false)
+    private Teacher adTeacher;
 
     public Address() {
     }
@@ -89,5 +92,13 @@ public class Address extends Object {
 
     public void setAdStudent(Student adStudent) {
         this.adStudent = adStudent;
+    }
+
+    public Teacher getAdTeacher() {
+        return adTeacher;
+    }
+
+    public void setAdTeacher(Teacher adTeacher) {
+        this.adTeacher = adTeacher;
     }
 }
