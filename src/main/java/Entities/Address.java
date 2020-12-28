@@ -19,6 +19,10 @@ public class Address extends Object {
     @Column(name = "postal_code", nullable = false, unique = true)
     private Integer postalCode;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_ad_student",nullable = false)
+    private Student adStudent;
+
     public Address() {
     }
 
@@ -79,5 +83,11 @@ public class Address extends Object {
         this.streetNumber = streetNumber;
     }
 
+    public Student getAdStudent() {
+        return adStudent;
+    }
 
+    public void setAdStudent(Student adStudent) {
+        this.adStudent = adStudent;
+    }
 }
